@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<conio.h>
+
+struct HonSo
+{
+    int Nguyen;
+    int Tu;
+    int Mau;
+};
+typedef struct HonSo HONSO;
+
+void NhapHonSo(HONSO&);
+void XuatHonSo(HONSO);
+void NhapHonSo(HONSO& hs)
+{
+    printf("\nNhap phan nguyen: ");
+    scanf("%d", &hs.Nguyen);
+
+    printf("\nNhap tu so: ");
+    scanf("%d", &hs.Tu);
+
+    printf("\nNhap mau so: ");
+    scanf("%d", &hs.Mau);
+
+}
+
+void XuatHonSo(HONSO hs)
+{
+    printf("%d(%d/%d)", hs.Nguyen, hs.Tu, hs.Mau);
+}
+
+int main()
+{
+    HONSO a, b;
+    NhapHonSo(a);
+    XuatHonSo(a);
+
+    NhapHonSo(b);
+    XuatHonSo(b);
+
+getch();
+return 0;
+}
